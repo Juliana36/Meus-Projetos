@@ -1,12 +1,11 @@
 saldo = float(500)
-estrato = float(0)
 historico_deposito = []  #para criar um historico dos depositos
 historico_saque = []  #para criar um historico dos saques
 mensagem = f'''
     --------------------------------- 
             [A] SACAR
             [B] DEPOSITAR
-            [C] VER ESTRATO
+            [C] VER EXTRATO
             [G] SAIR
     ---------------------------------  
       '''
