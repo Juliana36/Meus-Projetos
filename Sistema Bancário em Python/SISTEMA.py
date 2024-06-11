@@ -1,12 +1,11 @@
 saldo = float(500)
-estrato = float(0)
 historico_deposito = []  #para criar um historico dos depositos
 historico_saque = []  #para criar um historico dos saques
 mensagem = f'''
     --------------------------------- 
             [A] SACAR
             [B] DEPOSITAR
-            [C] VER ESTRATO
+            [C] VER EXTRATO
             [G] SAIR
     ---------------------------------  
       '''
@@ -19,9 +18,15 @@ while resposta != "G":
     if resposta == "A":
         saque = float(input('Quanto deseja sacar?'))
 
-        if saque > saldo:
+        if saldo == 0:
+            print('Sem Saldo em Conta. ')
+
+        elif saque > saldo and 0 > saldo:
            print('Saldo insuficiente.')
-           
+        
+        elif saque < 0:
+            print('Não é possivél efetuar esse saque')
+
         elif saque > 500:
             print('Limite de saque é R$500,00.')
 
